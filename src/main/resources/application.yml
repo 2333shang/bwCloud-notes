@@ -1,1 +1,36 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /notes
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+#logging:
+#  level:
+#    com.shang.news: trace
+    
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+  global-config:
+    db-config:
+      table-underline: true
+      logic-delete-value: 0
+      logic-not-delete-value: 1
 
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    username: zhanghao
+    password: Zh@111111
+    url: jdbc:mysql://rm-bp1bsxr9f9aei7g435o.mysql.rds.aliyuncs.com/notes?useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always #允许使用类路径下sql文件来创建和初始化外部的数据库

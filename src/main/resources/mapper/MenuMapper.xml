@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bwhs.cloud.dao.MenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bwhs.cloud.dto.Menu">
+        <id column="id" property="id" />
+        <result column="menu_no" property="menuNo" />
+        <result column="menu_privilege" property="menuPrivilege" />
+        <result column="menu_name" property="menuName" />
+        <result column="user_id" property="userId" />
+        <result column="parent_menu_no" property="parentMenuNo" />
+        <result column="created_date" property="createdDate" />
+        <result column="created_by" property="createdBy" />
+        <result column="modified_date" property="modifiedDate" />
+        <result column="modified_by" property="modifiedBy" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, menu_no, menu_privilege, menu_name, user_id, parent_menu_no, created_date, created_by, modified_date, modified_by
+    </sql>
+
+</mapper>

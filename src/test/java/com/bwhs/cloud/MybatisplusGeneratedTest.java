@@ -32,25 +32,25 @@ public class MybatisplusGeneratedTest {
 		 //设置数据源配置
 		 DataSourceConfig dsConfig = new DataSourceConfig();
 		 dsConfig.setDbType(DbType.MYSQL)//设置数据库类型
-		 		 .setUsername("root")//设置用户名
-		 		 .setPassword("")//设置密码
-		 		 .setUrl("jdbc:mysql://localhost:3306/immediatelynews?serverTimezone=UTC")
+		 		 .setUsername("zhanghao")//设置用户名
+		 		 .setPassword("Zh@111111")//设置密码
+		 		 .setUrl("jdbc:mysql://rm-bp1bsxr9f9aei7g435o.mysql.rds.aliyuncs.com/notes?useSSL=false&serverTimezone=Asia/Shanghai")
 		 		 .setDriverName("com.mysql.cj.jdbc.Driver");
 		 
 		 //设置策略配置
 		 StrategyConfig strategyConfig = new StrategyConfig();
 		 strategyConfig.setCapitalMode(true)//全局大写命名
 		 				.setNaming(NamingStrategy.underline_to_camel)//下划线转驼峰命名
-		 				.setTablePrefix("news_");//设置表前缀
+		 				.setTablePrefix("notes_");//设置表前缀
 //		 				.setInclude("news_user");//设置需要包含的表名，允许正则表达式（与exclude二选一配置）
 		 
 		 //报名策略配置
 		 PackageConfig pConfig = new PackageConfig();
-		 pConfig.setParent("com.shang.news")
-		 		.setMapper("mapper")
+		 pConfig.setParent("com.bwhs.cloud")
+		 		.setMapper("dao")
 		 		.setService("service")
 		 		.setController("controller")
-		 		.setEntity("entities")
+		 		.setEntity("dto")
 		 		.setXml("mapper");
 		 
 		 //整合配置
